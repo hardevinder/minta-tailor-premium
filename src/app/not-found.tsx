@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <section className="grid min-h-[65vh] place-items-center bg-[#171512] px-6 text-center text-white"><div><p className="eyebrow">404</p><h1 className="font-display mt-4 text-6xl">This page needs a fitting.</h1><p className="mt-5 text-white/55">The page you requested could not be found.</p><Link href="/" className="gold-button mt-8">Return home</Link></div></section>}

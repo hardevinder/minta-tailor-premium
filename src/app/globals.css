@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #161513;
+  --ink-soft: #24211d;
+  --ivory: #f4efe5;
+  --paper: #fbf8f1;
+  --gold: #b78a46;
+  --gold-pale: #d8bb88;
+  --muted: #746e64;
+  --line: rgba(183, 138, 70, 0.25);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+button, input, textarea, select { font: inherit; }
+::selection { background: var(--gold); color: #fff; }
+
+.font-display { font-family: Georgia, "Times New Roman", serif; }
+.container-shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.eyebrow { letter-spacing: .22em; text-transform: uppercase; font-size: .72rem; font-weight: 700; color: var(--gold); }
+.hairline { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+.gold-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: .7rem;
+  min-height: 52px; padding: 0 1.4rem; background: var(--gold); color: white;
+  border: 1px solid var(--gold); text-transform: uppercase; letter-spacing: .13em;
+  font-size: .72rem; font-weight: 700; transition: .25s ease;
+}
+.gold-button:hover { background: #9e7439; transform: translateY(-2px); }
+.ghost-button {
+  display: inline-flex; align-items: center; justify-content: center; gap: .7rem;
+  min-height: 52px; padding: 0 1.4rem; border: 1px solid rgba(255,255,255,.35);
+  color: white; text-transform: uppercase; letter-spacing: .13em; font-size: .72rem; font-weight: 700; transition: .25s ease;
+}
+.ghost-button:hover { border-color: var(--gold-pale); color: var(--gold-pale); }
+.card-lift { transition: transform .3s ease, box-shadow .3s ease; }
+.card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(26, 22, 17, .12); }
+.image-frame { position: relative; overflow: hidden; background: #28231d; }
+.image-frame::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.1); pointer-events: none; }
+.section-pad { padding-block: 110px; }
+
+@media (max-width: 768px) {
+  .container-shell { width: min(100% - 28px, 1180px); }
+  .section-pad { padding-block: 76px; }
+}
