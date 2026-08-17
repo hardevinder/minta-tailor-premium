@@ -11,8 +11,10 @@ export const business = {
   hours: "Daily · 9:00 AM–10:00 PM",
   established: "1990",
   specialty: "Gents Fashion Tailoring",
-  whatsappMessage: "Hello Minta Tailor and Drapers, I would like to enquire about custom stitching.",
-};
+  whatsappMessage: "Hello Minta Tailor and Drapers 👋 I would like to enquire about your tailoring services. Please share the details.",
+
+  whatsappDisplay: "+91 98151 88184",
+  whatsappRaw: "919815188184",};
 
 export type Service = {
   slug: string;
