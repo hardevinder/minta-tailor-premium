@@ -11,7 +11,6 @@ export function Footer() {
         <div><p className="eyebrow">Explore</p><div className="mt-5 grid gap-3 text-sm text-white/65"><Link href="/services">All services</Link>{services.slice(0,4).map(s => <Link key={s.slug} href={`/services/${s.slug}`}>{s.title}</Link>)}</div></div>
         <div><p className="eyebrow">Visit us</p><div className="mt-5 space-y-4 text-sm leading-6 text-white/65"><p className="flex gap-3"><PinIcon /><span>{business.address}</span></p><div className="space-y-2">
   <a href={`tel:+${business.phoneRaw}`} className="flex gap-3"><PhoneIcon />{business.phoneDisplay}</a>
-  <a href={`tel:+${business.secondaryPhoneRaw}`} className="flex gap-3"><PhoneIcon />{business.secondaryPhoneDisplay}</a>
 </div>
 <p>{business.hours}</p>
 <p>Established {business.established}</p></div></div>

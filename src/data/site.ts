@@ -2,10 +2,8 @@ export const business = {
   name: "Minta Tailor and Drapers",
   shortName: "Minta Tailor",
   tagline: "Tailored with character. Finished with precision.",
-  phoneDisplay: "+91 98885 19584",
-  phoneRaw: "919888519584",
-  secondaryPhoneDisplay: "+91 98151 88184",
-  secondaryPhoneRaw: "919815188184",
+  phoneDisplay: "9815188184",
+  phoneRaw: "919815188184",
   address: "Civil Hospital Road, Kharar, SAS Nagar, Distt. Mohali",
   city: "Kharar, SAS Nagar, Punjab",
   hours: "Daily · 9:00 AM–10:00 PM",
@@ -13,7 +11,7 @@ export const business = {
   specialty: "Gents Fashion Tailoring",
   whatsappMessage: "Hello Minta Tailor and Drapers 👋 I would like to enquire about your tailoring services. Please share the details.",
 
-  whatsappDisplay: "+91 98151 88184",
+  whatsappDisplay: "9815188184",
   whatsappRaw: "919815188184",};
 
 export type Service = {

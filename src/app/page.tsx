@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon, PhoneIcon, PinIcon } from "@/components/Icons";
@@ -5,6 +6,17 @@ import { SectionTitle } from "@/components/SectionTitle";
 import { ServiceCard } from "@/components/ServiceCard";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { business, processSteps, services, testimonials } from "@/data/site";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  ...createMetadata({
+    title: "Custom Tailor in Kharar",
+    description: "Made-to-measure pant coats, sherwanis, kurta pajamas, shirts, trousers and alterations by Minta Tailor and Drapers in Kharar.",
+    path: "/",
+    keywords: ["best tailor in Kharar", "gents tailor Kharar"],
+  }),
+  title: { absolute: `${business.name} | Custom Tailor in Kharar` },
+};
 
 export default function HomePage() {
   return <>

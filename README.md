@@ -77,4 +77,22 @@ Place optimized JPG/WebP files inside `public/images/`, then update each `image`
 
 - **Name:** Minta Tailor and Drapers
 - **Address:** Civil Hospital Road, Kharar, Near Government School
-- **Phone:** +91 98882 19584
+- **Phone:** 9815188184
+
+## Add or update page metadata
+
+Use the shared helper in `src/lib/seo.ts` for every public page. Static pages export a `metadata` object:
+
+```tsx
+import type { Metadata } from "next";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Page title",
+  description: "A unique description of this page.",
+  path: "/page-url",
+  keywords: ["primary local keyword", "secondary keyword"],
+});
+```
+
+Dynamic pages use `generateMetadata` and pass the current page path to the same helper. Update `NEXT_PUBLIC_SITE_URL` in `.env.local` before deployment so canonical, Open Graph, robots and sitemap URLs use the live domain.
