@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { business } from "@/data/site";
 
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL || "https://mintatailor.com"
+  process.env.NEXT_PUBLIC_SITE_URL || "https://mintatailor.in"
 ).replace(/\/$/, "");
 
 const defaultDescription =

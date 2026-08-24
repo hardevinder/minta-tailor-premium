@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.mintatailor.com" }],
-        destination: "https://mintatailor.com/:path*",
+        destination: "https://mintatailor.in/:path*",
         permanent: true,
       },
     ];
