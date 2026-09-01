@@ -4,14 +4,13 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.mintatailor.com" }],
-        destination: "https://mintatailor.in/:path*",
-        permanent: true,
-      },
-    ];
+    const legacyHosts = ["mintatailor.com", "www.mintatailor.com", "www.mintatailor.in"];
+    return legacyHosts.map((host) => ({
+      source: "/:path*",
+      has: [{ type: "host" as const, value: host }],
+      destination: "https://mintatailor.in/:path*",
+      permanent: true,
+    }));
   },
 };
 

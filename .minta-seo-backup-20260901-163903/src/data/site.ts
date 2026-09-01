@@ -24,11 +24,6 @@ export type Service = {
   highlights: string[];
   idealFor: string;
   turnaround: string;
-  seoTitle: string;
-  seoHeading: string;
-  seoDescription: string;
-  seoKeywords: string[];
-  localIntro: string;
 };
 
 export const services: Service[] = [
@@ -42,11 +37,6 @@ export const services: Service[] = [
     highlights: ["Personal measurement profile", "Fabric and lining guidance", "Multiple fitting checkpoints", "Classic and contemporary cuts"],
     idealFor: "Weddings, business wear, receptions and special occasions",
     turnaround: "Timeline confirmed after design and fabric selection",
-    seoTitle: "Pant Coat Tailor in Kharar | Bespoke Suits",
-    seoHeading: "Bespoke Pant & Coat Tailor in Kharar",
-    seoDescription: "Made-to-measure pant coat and suit tailoring in Kharar by Minta Tailor and Drapers. Personal measurements, fitting-led refinement and formalwear styling for Kharar, SAS Nagar and Mohali.",
-    seoKeywords: ["pant coat tailor Kharar", "suit tailor Kharar", "bespoke suit Kharar", "gents coat pant stitching Kharar"],
-    localIntro: "Looking for a pant coat tailor in Kharar? We create made-to-measure suits for weddings, business wear, receptions and special occasions, with fittings shaped around your posture and preferred silhouette.",
   },
   {
     slug: "wedding-sherwani",
@@ -58,11 +48,6 @@ export const services: Service[] = [
     highlights: ["Groom styling consultation", "Layering and comfort planning", "Button and trim detailing", "Coordinated pajama or trouser fit"],
     idealFor: "Wedding day, engagement and reception functions",
     turnaround: "Book early for wedding-season fittings",
-    seoTitle: "Sherwani Tailor in Kharar | Wedding Sherwani",
-    seoHeading: "Wedding Sherwani Tailor in Kharar",
-    seoDescription: "Custom wedding sherwani tailoring in Kharar for grooms and special occasions. Minta Tailor and Drapers serves clients across Kharar, SAS Nagar and Mohali.",
-    seoKeywords: ["sherwani tailor Kharar", "wedding sherwani Kharar", "groom sherwani tailor Kharar", "wedding tailor Kharar"],
-    localIntro: "For grooms searching for a sherwani tailor in Kharar, we focus on proportion, movement, layering and coordinated bottoms so the complete wedding look feels comfortable and composed.",
   },
   {
     slug: "kurta-pajama",
@@ -74,11 +59,6 @@ export const services: Service[] = [
     highlights: ["Straight and tapered silhouettes", "Custom collar and cuff options", "Occasion-specific detailing", "Comfort-focused measurements"],
     idealFor: "Festivals, family functions, office and daily wear",
     turnaround: "Depends on fabric, detailing and current workload",
-    seoTitle: "Kurta Pajama Tailor in Kharar | Custom Stitching",
-    seoHeading: "Kurta Pajama Tailor in Kharar",
-    seoDescription: "Custom kurta pajama stitching in Kharar for daily wear, festivals and family functions. Tailored collars, cuffs and silhouettes by Minta Tailor and Drapers.",
-    seoKeywords: ["kurta pajama tailor Kharar", "kurta pajama stitching Kharar", "gents kurta tailor Kharar", "ethnic wear tailor Kharar"],
-    localIntro: "Our kurta pajama tailoring in Kharar combines traditional comfort with a clean modern fit for festivals, family functions, office wear and everyday dressing.",
   },
   {
     slug: "shirts-trousers",
@@ -90,11 +70,6 @@ export const services: Service[] = [
     highlights: ["Reusable measurement profile", "Multiple collar and cuff styles", "Formal and semi-formal trouser cuts", "Balanced comfort and shape"],
     idealFor: "Office, events, uniforms and daily dressing",
     turnaround: "Confirmed at order placement",
-    seoTitle: "Shirt & Trouser Tailor in Kharar | Custom Fit",
-    seoHeading: "Custom Shirt & Trouser Tailor in Kharar",
-    seoDescription: "Made-to-measure shirts and trousers in Kharar with reusable measurements, collar and cuff options, and formal or semi-formal trouser cuts.",
-    seoKeywords: ["shirt tailor Kharar", "trouser tailor Kharar", "shirt pant stitching Kharar", "gents tailor Kharar"],
-    localIntro: "For clients looking for a shirt or trouser tailor in Kharar, we create dependable wardrobe essentials with crisp lines, comfortable movement and a measurement profile that can be reused for future orders.",
   },
   {
     slug: "alterations-restyling",
@@ -106,11 +81,6 @@ export const services: Service[] = [
     highlights: ["Fit assessment before work", "Length and waist corrections", "Sleeve and shoulder refinements", "Honest feasibility guidance"],
     idealFor: "Existing suits, trousers, shirts and ethnic wear",
     turnaround: "Based on alteration complexity",
-    seoTitle: "Clothing Alterations in Kharar | Minta Tailor",
-    seoHeading: "Gents Clothing Alterations in Kharar",
-    seoDescription: "Gents clothing alterations and fit corrections in Kharar for suits, trousers, shirts and ethnic wear. Practical assessment before alteration work begins.",
-    seoKeywords: ["clothing alterations Kharar", "suit alteration Kharar", "trouser alteration Kharar", "tailor alterations Kharar"],
-    localIntro: "Need clothing alterations in Kharar? We assess existing garments before work begins and recommend practical fit corrections for trousers, shirts, suits and ethnic wear.",
   },
   {
     slug: "fabric-draping-guidance",
@@ -122,11 +92,6 @@ export const services: Service[] = [
     highlights: ["Season and occasion guidance", "Texture and drape comparison", "Colour coordination support", "Design suitability review"],
     idealFor: "Clients selecting fabric before placing a stitching order",
     turnaround: "Consultation available during shop hours",
-    seoTitle: "Suit Fabric & Draping Guidance in Kharar",
-    seoHeading: "Suit Fabric & Draping Guidance in Kharar",
-    seoDescription: "Practical fabric selection and draping guidance in Kharar for suits, weddingwear and custom menswear, including season, texture, fall and colour coordination.",
-    seoKeywords: ["suit fabric Kharar", "fabric selection Kharar", "draper Kharar", "menswear fabric guidance Kharar"],
-    localIntro: "Choosing the right fabric is part of a good custom fit. At our Kharar shop, we help clients compare texture, fall, seasonal weight and design suitability before stitching.",
   },
 ];
 
