@@ -22,8 +22,17 @@ Minta Tailor and Drapers is physically based in Kharar. The business serves and 
 ## Important pages
 - https://mintatailor.in/
 - https://mintatailor.in/services
+- https://mintatailor.in/tailoring
 - https://mintatailor.in/locations
+- https://mintatailor.in/faq
+- https://mintatailor.in/guides
 - https://mintatailor.in/about
 - https://mintatailor.in/contact
+
+## AI and search crawler access
+The public website is intentionally crawlable by major search and AI discovery agents, including OAI-SearchBot, Claude-SearchBot, Claude-User, ClaudeBot and Bingbot, subject to robots.txt.
+
+## Business identity note
+Minta Tailor and Drapers has one physical shop at Civil Hospital Road, Kharar. References to Mohali, Landran, Kurali, Morinda and Punjab describe customer/service areas and do not represent additional branches.
 
 For current services, timings, directions and enquiries, use the official website above.
