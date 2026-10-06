@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { galleryCategories, services } from "@/data/site";
 import { priorityLocations } from "@/data/locations";
+import { searchIntentPages } from "@/data/searchIntents";
 import { siteUrl } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", priority: 0.7, changeFrequency: "monthly" as const },
     { path: "/contact", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/locations", priority: 0.9, changeFrequency: "monthly" as const },
+    { path: "/tailoring", priority: 0.92, changeFrequency: "monthly" as const },
   ];
 
   return [
@@ -28,6 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteUrl}/locations/${location.slug}`,
       changeFrequency: "monthly" as const,
       priority: location.slug === "kharar" ? 0.95 : 0.86,
+    })),
+    ...searchIntentPages.map((page) => ({
+      url: `${siteUrl}/tailoring/${page.slug}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
     })),
     ...galleryCategories.map((category) => ({
       url: `${siteUrl}/gallery/${category.slug}`,

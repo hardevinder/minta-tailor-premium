@@ -8,7 +8,7 @@ import { Logo } from "./Logo";
 import { MenuIcon, PhoneIcon } from "./Icons";
 
 const links = [
-  ["Home", "/"], ["Services", "/services"], ["Locations", "/locations"], ["Gallery", "/gallery"], ["Our Story", "/about"], ["Contact", "/contact"],
+  ["Home", "/"], ["Services", "/services"], ["Tailoring", "/tailoring"], ["Locations", "/locations"], ["Gallery", "/gallery"], ["Our Story", "/about"], ["Contact", "/contact"],
 ];
 
 export function Header() {

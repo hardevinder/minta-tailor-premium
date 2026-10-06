@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { business, type Service } from "@/data/site";
 import type { LocationPage } from "@/data/locations";
+import type { SearchIntentPage } from "@/data/searchIntents";
 
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://mintatailor.in"
@@ -208,5 +209,33 @@ export function locationJsonLd(location: LocationPage) {
       name: `${location.name}, Punjab`,
     },
     serviceType: "Made-to-measure gents tailoring",
+  };
+}
+
+
+export function searchIntentJsonLd(page: SearchIntentPage, service: Service) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${siteUrl}/tailoring/${page.slug}#service`,
+    name: page.title.split(" | ")[0],
+    description: page.description,
+    url: `${siteUrl}/tailoring/${page.slug}`,
+    provider: { "@id": `${siteUrl}/#business` },
+    serviceType: service.title,
+    areaServed: page.relatedLocationSlugs.includes("mohali")
+      ? [
+          { "@type": "City", name: "Kharar" },
+          { "@type": "City", name: "Mohali" },
+          { "@type": "AdministrativeArea", name: "Punjab" },
+        ]
+      : [
+          { "@type": "City", name: "Kharar" },
+          { "@type": "AdministrativeArea", name: "Punjab" },
+        ],
+    offers: {
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: service.title },
+    },
   };
 }

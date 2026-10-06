@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { ServiceCard } from "@/components/ServiceCard";
+import { searchIntentPages } from "@/data/searchIntents";
 import { services } from "@/data/site";
 import { createMetadata } from "@/lib/seo";
 
@@ -28,5 +30,6 @@ export default function ServicesPage(){
       </div>
     </section>
     <section className="section-pad"><div className="container-shell grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.map(s=><ServiceCard key={s.slug} service={s}/>)}</div></section>
+    <section className="bg-[#efe8dc] section-pad"><div className="container-shell"><p className="eyebrow">Popular searches</p><h2 className="font-display mt-4 max-w-4xl text-4xl md:text-5xl">Find the right tailoring guide by garment and service area.</h2><div className="mt-8 flex flex-wrap gap-3">{searchIntentPages.map((page)=><Link key={page.slug} href={`/tailoring/${page.slug}`} className="border border-black/10 bg-[#fbf8f1] px-4 py-3 text-xs font-bold uppercase tracking-[.12em] text-[#8f6833] hover:border-[#b78a46]/50">{page.title.split(" | ")[0]} →</Link>)}</div></div></section>
   </>
 }
