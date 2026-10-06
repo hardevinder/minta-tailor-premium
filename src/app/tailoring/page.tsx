@@ -36,5 +36,7 @@ export default function TailoringHubPage() {
       <div><p className="eyebrow">One real shop</p><h2 className="font-display mt-4 text-4xl md:text-5xl">Kharar since {business.established}. Clear service-area information everywhere else.</h2><p className="mt-5 max-w-2xl text-base leading-8 text-[#6f685f]">Search pages are useful only when they help a real customer. Every guide points back to the same Kharar business, services and contact details, keeping location information consistent for customers and search engines.</p></div>
       <div className="flex items-center lg:justify-end"><WhatsAppButton label="Ask about a fitting" /></div>
     </div></section>
+
+    <section className="section-pad"><div className="container-shell grid gap-6 md:grid-cols-2"><Link href="/guides" className="border border-black/10 p-7"><p className="eyebrow">Learn</p><h2 className="font-display mt-3 text-3xl">Tailoring guides</h2><p className="mt-3 text-sm leading-7 text-[#6f685f]">Read practical guidance on suit fit, sherwani fittings, groom outfit choices and wedding tailoring timelines.</p></Link><Link href="/faq" className="border border-black/10 p-7"><p className="eyebrow">Ask</p><h2 className="font-display mt-3 text-3xl">Frequently asked questions</h2><p className="mt-3 text-sm leading-7 text-[#6f685f]">Get clear answers about our Kharar location, fittings, services, timelines and customers visiting from Mohali and across Punjab.</p></Link></div></section>
   </>;
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { business, type Service } from "@/data/site";
 import type { LocationPage } from "@/data/locations";
 import type { SearchIntentPage } from "@/data/searchIntents";
+import type { Guide } from "@/data/guides";
 
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://mintatailor.in"
@@ -237,5 +238,22 @@ export function searchIntentJsonLd(page: SearchIntentPage, service: Service) {
       "@type": "Offer",
       itemOffered: { "@type": "Service", name: service.title },
     },
+  };
+}
+
+
+export function articleJsonLd(guide: Guide) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${siteUrl}/guides/${guide.slug}#article`,
+    headline: guide.title,
+    description: guide.description,
+    url: `${siteUrl}/guides/${guide.slug}`,
+    author: { "@id": `${siteUrl}/#business` },
+    publisher: { "@id": `${siteUrl}/#business` },
+    mainEntityOfPage: `${siteUrl}/guides/${guide.slug}`,
+    inLanguage: "en-IN",
+    about: guide.keywords,
   };
 }
