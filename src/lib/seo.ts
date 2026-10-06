@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { business, type Service } from "@/data/site";
+import type { LocationPage } from "@/data/locations";
 
 export const siteUrl = (
   process.env.NEXT_PUBLIC_SITE_URL || "https://mintatailor.in"
 ).replace(/\/$/, "");
 
 export const defaultDescription =
-  "Gents tailor in Kharar for made-to-measure pant coats, wedding sherwanis, kurta pajamas, shirts, trousers and alterations. Serving Kharar, SAS Nagar and Mohali.";
+  "Minta Tailor and Drapers is a Kharar-based gents tailor for made-to-measure pant coats, suits, wedding sherwanis, kurta pajamas, shirts, trousers and alterations, serving Mohali and clients across Punjab.";
 
 export const defaultKeywords = [
   "gents tailor in Kharar",
@@ -16,9 +17,12 @@ export const defaultKeywords = [
   "pant coat tailor Kharar",
   "sherwani tailor Kharar",
   "mens tailor Kharar",
+  "gents tailor Mohali",
+  "tailor Punjab",
+  "wedding tailor Punjab",
 ];
 
-export const localAreas = ["Kharar", "SAS Nagar", "Mohali"];
+export const localAreas = ["Kharar", "SAS Nagar", "Mohali", "Landran", "Kurali", "Morinda"];
 
 type PageMetadata = {
   title: string;
@@ -73,10 +77,10 @@ export function createMetadata({
 }
 
 export function siteJsonLd() {
-  const areaServed = localAreas.map((name) => ({
-    "@type": "City",
-    name,
-  }));
+  const areaServed = [
+    ...localAreas.map((name) => ({ "@type": "City", name })),
+    { "@type": "AdministrativeArea", name: "Punjab" },
+  ];
 
   return {
     "@context": "https://schema.org",
@@ -104,6 +108,8 @@ export function siteJsonLd() {
           addressRegion: "Punjab",
           addressCountry: "IN",
         },
+        slogan: business.tagline,
+        priceRange: "₹₹",
         areaServed,
         knowsAbout: [
           "Gents tailoring",
@@ -166,7 +172,10 @@ export function serviceJsonLd(service: Service) {
     url: `${siteUrl}/services/${service.slug}`,
     image: `${siteUrl}${service.image}`,
     provider: { "@id": `${siteUrl}/#business` },
-    areaServed: localAreas.map((name) => ({ "@type": "City", name })),
+    areaServed: [
+      ...localAreas.map((name) => ({ "@type": "City", name })),
+      { "@type": "AdministrativeArea", name: "Punjab" },
+    ],
     serviceType: service.title,
   };
 }
@@ -181,5 +190,23 @@ export function breadcrumbJsonLd(items: Array<{ name: string; path: string }>) {
       name: item.name,
       item: `${siteUrl}${item.path}`,
     })),
+  };
+}
+
+
+export function locationJsonLd(location: LocationPage) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${siteUrl}/locations/${location.slug}#service-area`,
+    name: `Gents tailoring for clients from ${location.name}`,
+    description: location.intro,
+    url: `${siteUrl}/locations/${location.slug}`,
+    provider: { "@id": `${siteUrl}/#business` },
+    areaServed: {
+      "@type": "Place",
+      name: `${location.name}, Punjab`,
+    },
+    serviceType: "Made-to-measure gents tailoring",
   };
 }

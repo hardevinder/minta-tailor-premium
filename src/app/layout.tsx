@@ -7,6 +7,7 @@ import { business } from "@/data/site";
 import { siteJsonLd, siteUrl } from "@/lib/seo";
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+const bingSiteVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -15,11 +16,12 @@ export const metadata: Metadata = {
     template: `%s | ${business.shortName}`,
   },
   description:
-    "Gents tailor in Kharar for made-to-measure pant coats, wedding sherwanis, kurta pajamas, shirts, trousers and alterations. Serving Kharar, SAS Nagar and Mohali.",
+    "Minta Tailor and Drapers is a Kharar-based gents tailor for custom suits, pant coats, wedding sherwanis, kurta pajamas, shirts and trousers, serving Mohali and clients across Punjab.",
   icons: { icon: "/favicon.svg" },
-  ...(googleSiteVerification
-    ? { verification: { google: googleSiteVerification } }
-    : {}),
+  verification: {
+    ...(googleSiteVerification ? { google: googleSiteVerification } : {}),
+    ...(bingSiteVerification ? { other: { "msvalidate.01": bingSiteVerification } } : {}),
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

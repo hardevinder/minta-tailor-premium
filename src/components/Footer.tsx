@@ -7,8 +7,8 @@ export function Footer() {
   return (
     <footer className="bg-[#171512] text-white">
       <div className="container-shell grid gap-12 py-20 lg:grid-cols-[1.4fr_.8fr_.9fr]">
-        <div><Logo inverse /><p className="mt-6 max-w-md text-sm leading-7 text-white/60">Custom tailoring for men, shaped around your measurements, occasion and personal style.</p></div>
-        <div><p className="eyebrow">Explore</p><div className="mt-5 grid gap-3 text-sm text-white/65"><Link href="/services">All services</Link>{services.slice(0,4).map(s => <Link key={s.slug} href={`/services/${s.slug}`}>{s.title}</Link>)}</div></div>
+        <div><Logo inverse /><p className="mt-6 max-w-md text-sm leading-7 text-white/60">Custom tailoring for men, shaped around your measurements, occasion and personal style. Based in Kharar and serving clients across Mohali and Punjab.</p></div>
+        <div><p className="eyebrow">Explore</p><div className="mt-5 grid gap-3 text-sm text-white/65"><Link href="/services">All services</Link><Link href="/locations">Areas we serve</Link>{services.slice(0,4).map(s => <Link key={s.slug} href={`/services/${s.slug}`}>{s.title}</Link>)}</div></div>
         <div><p className="eyebrow">Visit us</p><div className="mt-5 space-y-4 text-sm leading-6 text-white/65"><p className="flex gap-3"><PinIcon /><span>{business.address}</span></p><div className="space-y-2">
   <a href={`tel:+${business.phoneRaw}`} className="flex gap-3"><PhoneIcon />{business.phoneDisplay}</a>
 </div>
